@@ -125,7 +125,7 @@ export default definePlugin({
             </Forms.FormText>
 
             <Forms.FormText className={Margins.top8}>
-                Only use experiments if you know what you're doing. Vencord is not responsible for any damage caused by enabling experiments.
+                Only use experiments if you know what you're doing. Vencord and/or Venticord is not responsible for any damage caused by enabling experiments.
             </Forms.FormText>
         </ErrorCard>
     ), { noop: true })

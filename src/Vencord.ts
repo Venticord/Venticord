@@ -92,7 +92,7 @@ async function init() {
                 await update();
                 if (Settings.autoUpdateNotification)
                     setTimeout(() => showNotification({
-                        title: "Vencord has been updated!",
+                        title: "Venticord has been updated!",
                         body: "Click here to restart",
                         permanent: true,
                         noPersist: true,
@@ -103,7 +103,7 @@ async function init() {
 
             if (Settings.notifyAboutUpdates)
                 setTimeout(() => showNotification({
-                    title: "A Vencord update is available!",
+                    title: "A Venticord update is available!",
                     body: "Click here to view the update",
                     permanent: true,
                     noPersist: true,
@@ -123,7 +123,7 @@ async function init() {
                 "Webpack has finished initialising, but some patches haven't been applied yet.",
                 "This might be expected since some Modules are lazy loaded, but please verify",
                 "that all plugins are working as intended.",
-                "You are seeing this warning because this is a Development build of Vencord.",
+                "You are seeing this warning because this is a Development build of Venticord.",
                 "\nThe following patches have not been applied:",
                 "\n\n" + pendingPatches.map(p => `${p.plugin}: ${p.find}`).join("\n")
             );
