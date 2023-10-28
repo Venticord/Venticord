@@ -164,13 +164,13 @@ export default definePlugin({
     },
 
     get quote() {
-        if (settings.store["quoteT"] == QuoteTypes.Default) {
+        if (settings.store.quoteT == QuoteTypes.Default) {
             return this.xor(quotes[Math.floor(Math.random() * quotes.length)]);
         }
-        if (settings.store["quoteT"] == QuoteTypes.Infused) {
+        if (settings.store.quoteT == QuoteTypes.Infused) {
             return this.xor(quotes[Math.floor(Math.random() * fusedquotes.length)]);
         }
-        if (settings.store["quoteT"] == QuoteTypes.Josiah) {
+        if (settings.store.quoteT == QuoteTypes.Josiah) {
             return this.xor(quotes[Math.floor(Math.random() * josiahQuotes.length)]);
         }
     }
