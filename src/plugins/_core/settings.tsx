@@ -83,12 +83,12 @@ export default definePlugin({
         return [
             {
                 section: SectionTypes.HEADER,
-                label: "Vencord",
+                label: "Venticord",
                 className: "vc-settings-header"
             },
             {
                 section: "VencordSettings",
-                label: "Vencord",
+                label: "Venticord",
                 element: require("@components/VencordSettings/VencordTab").default,
                 className: "vc-settings"
             },
@@ -138,7 +138,7 @@ export default definePlugin({
     options: {
         settingsLocation: {
             type: OptionType.SELECT,
-            description: "Where to put the Vencord settings section",
+            description: "Where to put the Venticord settings section",
             options: [
                 { label: "At the very top", value: "top" },
                 { label: "Above the Nitro section", value: "aboveNitro" },
@@ -167,10 +167,10 @@ export default definePlugin({
     },
 
     get additionalInfo() {
-        if (IS_DEV) return " (Dev)";
-        if (IS_WEB) return " (Web)";
-        if (IS_VESKTOP) return ` (Vesktop v${VesktopNative.app.getVersion()})`;
-        if (IS_STANDALONE) return " (Standalone)";
+        if (IS_DEV) return " (Deventi)";
+        if (IS_WEB) return " (Veb)";
+        if (IS_VESKTOP) return ` (Ventitop v${VesktopNative.app.getVersion()})`;
+        if (IS_STANDALONE) return " (Venticord)";
         return "";
     },
 

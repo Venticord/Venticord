@@ -31,8 +31,8 @@ import { SettingsTab, wrapTab } from "./shared";
 
 const cl = classNameFactory("vc-settings-");
 
-const DEFAULT_DONATE_IMAGE = "https://cdn.discordapp.com/emojis/1026533090627174460.png";
-const SHIGGY_DONATE_IMAGE = "https://media.discordapp.net/stickers/1039992459209490513.png";
+const DEFAULT_DONATE_IMAGE = "https://cdn.discordapp.com/attachments/1153275721330987078/1168041184107712582/sipIcon1024.png";
+const SHIGGY_DONATE_IMAGE = "https://cdn.discordapp.com/attachments/1153287054462025800/1168043473736315001/shiggying_everywhere.gif";
 
 type KeysOfType<Object, Type> = {
     [K in keyof Object]: Object[K] extends Type ? K : never;
@@ -97,7 +97,7 @@ function VencordSettings() {
         ];
 
     return (
-        <SettingsTab title="Vencord Settings">
+        <SettingsTab title="Venticord Settings">
             <DonateCard image={donateImage} />
             <Forms.FormSection title="Quick Actions">
                 <Card className={cl("quick-actions-card")}>
@@ -124,7 +124,7 @@ function VencordSettings() {
                             </Button>
                         )}
                         <Button
-                            onClick={() => VencordNative.native.openExternal("https://github.com/Vendicated/Vencord")}
+                            onClick={() => VencordNative.native.openExternal("https://github.com/Venticord/Venticord")}
                             size={Button.Sizes.SMALL}
                             disabled={settingsDirPending}>
                             Open in GitHub
@@ -248,8 +248,8 @@ function DonateCard({ image }: DonateCardProps) {
     return (
         <Card className={cl("card", "donate")}>
             <div>
-                <Forms.FormTitle tag="h5">Support the Project</Forms.FormTitle>
-                <Forms.FormText>Please consider supporting the development of Vencord by donating!</Forms.FormText>
+                <Forms.FormTitle tag="h5">Support the Vencord Project</Forms.FormTitle>
+                <Forms.FormText>Please consider supporting the development of Vencord by donating! It helps Ven himself make Vencord, which I can remake into my own thing!</Forms.FormText>
                 <DonateButton style={{ transform: "translateX(-1em)" }} />
             </div>
             <img
