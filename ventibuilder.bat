@@ -63,7 +63,7 @@ move %buildDir%\DesktopFiles\* %dist%
 pnpm inject
 :PushGit
 git add .
-git commit "Venticord Commit"
+git commit
 git push
 set /P tag="Enter your tag: "
 set /P buildDir="Enter the directory with the Desktop files: "
