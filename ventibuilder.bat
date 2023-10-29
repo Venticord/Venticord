@@ -39,14 +39,21 @@ pnpm build && pnpm buildWeb
 :MoveFiles
 echo ------------------
 echo Welcome back! We're moving your files now, please wait.
-move %dist%\extension-* %buildDir%\Web\
-move %dist%\*-unpacked %buildDir%\Web\
-del /S /F %dist%\extension-*
-del /S /F %dist%\chromium-unpacked
-del /S /F %dist%\firefox-unpacked
-del /S /F %dist%\monaco
-del /S /F %dist%\browser*
-move %dist%\* %buildDir%\DesktopFiles\
+echo moving extensions
+move .\dist\extension-chrome.zip %buildDir%\Web\
+move .\dist\extension-firefox.zip %buildDir%\Web\
+echo moving unpacked builds
+move .\dist\chromium-unpacked %buildDir%\Web\
+move .\dist\firefox-unpacked %buildDir%\Web\
+echo deleting leftover web files
+del /S /F .\dist\extension-chrome.zip
+del /S /F .\dist\chromium-unpacked\*
+del /S /F .\dist\extension-firefox.zip
+del /S /F .\dist\firefox-unpacked\*
+rmdir /S .\dist\monaco\
+del /S /F .\dist\browser*
+echo moving desktop
+move .\dist\* %buildDir%\DesktopFiles\
 echo Done! You can now install your new-built Venticord by rerunning this batch file pressing "I" when prompted.
 exit /B
 :Installation
@@ -59,7 +66,7 @@ echo [31mEXIT NOW!!![0m
 echo Press a key to install.
 pause>nul
 echo ------------------
-move %buildDir%\DesktopFiles\* %dist%
+move %buildDir%\DesktopFiles\* .\dist
 pnpm inject
 :PushGit
 git add .
