@@ -68,10 +68,8 @@ pause>nul
 echo ------------------
 move %buildDir%\DesktopFiles\* .\dist
 pnpm inject
+exit /B
 :PushGit
 git add .
 git commit -m "Ventibuild Commit"
 git push
-set /P tag="Enter your tag: "
-set /P buildDir="Enter the directory with the Desktop files: "
-gh release create %tag% %buildDir%\*
