@@ -100,14 +100,14 @@ const fusedquotes = [
     // Josiah Quotes starts Here
     "dddvw`(",
     "B+().%an~l*fe!c#bw\u007f&(K !*+\"sh`gtm)mbvd\"na%g'n{s*",
-    `"hemkwc'|acx"`,
-    `you found out how do decode this?)"sos"fjficmm#`
+    "\"hemkwc'|acx\"",
+    "you found out how do decode this?)\"sos\"fjficmm#"
 ];
 const josiahQuotes = [
     "dddvw`(",
     "B+().%an~l*fe!c#bw\u007f&(K !*+\"sh`gtm)mbvd\"na%g'n{s*",
-    `"hemkwc'|acx"`,
-    `you found out how do decode this?)"sos"fjficmm#`
+    "\"hemkwc'|acx\"",
+    "you found out how do decode this?)\"sos\"fjficmm#"
 ];
 
 enum QuoteTypes {
@@ -164,14 +164,14 @@ export default definePlugin({
     },
 
     get quote() {
-        if (settings.store.quoteT == QuoteTypes.Default) {
+        if (settings.store.quoteT === QuoteTypes.Default) {
             return this.xor(quotes[Math.floor(Math.random() * quotes.length)]);
         }
-        if (settings.store.quoteT == QuoteTypes.Infused) {
-            return this.xor(quotes[Math.floor(Math.random() * fusedquotes.length)]);
+        if (settings.store.quoteT === QuoteTypes.Infused) {
+            return this.xor(fusedquotes[Math.floor(Math.random() * fusedquotes.length)]);
         }
-        if (settings.store.quoteT == QuoteTypes.Josiah) {
-            return this.xor(quotes[Math.floor(Math.random() * josiahQuotes.length)]);
+        if (settings.store.quoteT === QuoteTypes.Josiah) {
+            return this.xor(josiahQuotes[Math.floor(Math.random() * josiahQuotes.length)]);
         }
     }
 });
