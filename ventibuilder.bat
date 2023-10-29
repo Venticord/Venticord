@@ -58,4 +58,4 @@ echo Press a key to install.
 pause>nul
 echo ------------------
 move %buildDir%\DesktopFiles\* %dist%
-pnpm install
+pnpm inject
