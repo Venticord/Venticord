@@ -6,11 +6,13 @@ echo built for you!
 echo ------------------
 echo Press M if you have built and have been told to move in this tool.
 echo Press I to use the files in your build directory to install Venticord.
-echo Press anything else to proceed with building.'
+echo Press P to push to the origin.
+echo Press anything else to proceed with building.
 set dist=".\dist\"
 set /P choice="Choose a choice:"
 if "%choice%" == "M" ( goto MoveFiles )
 if "%choice%" == "I" ( goto Installation )
+if "%choice%" == "P" ( goto PushGit )
 set /P buildDir="Enter the build directory: "
 echo You have chosen %buildDir%.
 echo Clearing...
@@ -59,3 +61,10 @@ pause>nul
 echo ------------------
 move %buildDir%\DesktopFiles\* %dist%
 pnpm inject
+:PushGit
+git add .
+git commit "Venticord Commit"
+git push
+set /P tag="Enter your tag: "
+set /P buildDir="Enter the directory with the Desktop files: "
+gh release create %tag% %buildDir%\*
