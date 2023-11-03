@@ -24,7 +24,7 @@ import { Heart } from "@components/Heart";
 import { Devs } from "@utils/constants";
 import { Logger } from "@utils/Logger";
 import { Margins } from "@utils/margins";
-import { isPluginDev } from "@utils/misc";
+import { isPluginDev, isVentiDev } from "@utils/misc";
 import { closeModal, Modals, openModal } from "@utils/modal";
 import definePlugin from "@utils/types";
 import { Forms, Toasts } from "@webpack/common";
@@ -45,6 +45,20 @@ const ContributorBadge: ProfileBadge = {
     link: "https://github.com/Vendicated/Vencord"
 };
 
+const VentiContributorBadge: ProfileBadge = {
+    description: "Venticord Contributor",
+    image: "https://cdn.discordapp.com/attachments/1153275360402743316/1169951726623797248/venti.png",
+    position: BadgePosition.START,
+    props: {
+        style: {
+            borderRadius: "50%",
+            transform: "scale(0.9)" // The image is a bit too big compared to default badges
+        }
+    },
+    shouldShow: ({ user }) => isVentiDev(user.id),
+    link: "https://github.com/Venticord/Venticord"
+};
+
 let DonorBadges = {} as Record<string, Pick<ProfileBadge, "image" | "description">[]>;
 
 async function loadBadges(noCache = false) {
@@ -54,7 +68,7 @@ async function loadBadges(noCache = false) {
     if (noCache)
         init.cache = "no-cache";
 
-    const badges = await fetch("https://gist.githubusercontent.com/Vendicated/51a3dd775f6920429ec6e9b735ca7f01/raw/badges.csv", init)
+    const badges = await fetch("https://raw.githubusercontent.com/Venticord/Assets/main/badges.csv", init)
         .then(r => r.text());
 
     const lines = badges.trim().split("\n");
@@ -116,6 +130,7 @@ export default definePlugin({
 
     async start() {
         Vencord.Api.Badges.addBadge(ContributorBadge);
+        Vencord.Api.Badges.addBadge(VentiContributorBadge);
         await loadBadges();
     },
 

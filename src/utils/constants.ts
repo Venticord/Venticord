@@ -41,6 +41,14 @@ export interface Dev {
  * If you wish to stay fully anonymous, feel free to set ID to 0n.
  * If you are fine with attribution but don't want the badge, add badge: false
  */
+
+export const VentiDevs = /* #__PURE__ */ Object.freeze({
+    Josiah: {
+        name: "freesmart",
+        id: 853014693115068426n
+    },
+} satisfies Record<string, Dev>);
+
 export const Devs = /* #__PURE__*/ Object.freeze({
     Ven: {
         name: "Vendicated",
@@ -48,7 +56,8 @@ export const Devs = /* #__PURE__*/ Object.freeze({
     },
     Josiah: {
         name: "freesmart",
-        id: 853014693115068426n
+        id: 853014693115068426n,
+        badge: false
     },
     Arjix: {
         name: "ArjixWasTaken",
@@ -389,6 +398,14 @@ export const Devs = /* #__PURE__*/ Object.freeze({
 export const DevsById = /* #__PURE__*/ (() =>
     Object.freeze(Object.fromEntries(
         Object.entries(Devs)
+            .filter(d => d[1].id !== 0n)
+            .map(([_, v]) => [v.id, v] as const)
+    ))
+)() as Record<string, Dev>;
+
+export const VentiDevsById = /* #__PURE__*/ (() =>
+    Object.freeze(Object.fromEntries(
+        Object.entries(VentiDevs)
             .filter(d => d[1].id !== 0n)
             .map(([_, v]) => [v.id, v] as const)
     ))
