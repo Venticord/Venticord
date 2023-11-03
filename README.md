@@ -6,8 +6,12 @@ The cutest Discord client mod's silliest mod!
 
 # DISCLAIMER
 I will NOT be merging this with Vencord. What makes you think I would?
+Reasons:
+1. i added myself to the devs list
+2. i don't think it would be merged
 
-![image](https://github.com/Vendicated/Vencord/assets/45497981/706722b1-32de-4d99-bee9-93993b504334)
+![image](https://github.com/Venticord/Venticord/assets/65928867/ef655d4a-ca3c-41b7-ba53-cab2e6f2e061)
+
 
 ## Features
 
@@ -24,20 +28,24 @@ I will NOT be merging this with Vencord. What makes you think I would?
 
 
 ## Installing / Uninstalling
-
+### Vencord
 Visit https://vencord.dev/download
+### Venticord
+No site for venticord yet :( but you can go to https://github.com/Venticord/Installer 
 
 ## Join our Support/Community Server
-
+### Vencord
 https://discord.gg/D9uwnFnqmd
+### Venticord
+https://discord.gg/UsjU3GSTVE
 
 ## Star History
 
-<a href="https://star-history.com/#Vendicated/Vencord&Timeline">
+<a href="https://star-history.com/#Venticord/Venticord&Timeline">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=Vendicated/Vencord&type=Timeline&theme=dark" />
-    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=Vendicated/Vencord&type=Timeline" />
-    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=Vendicated/Vencord&type=Timeline" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=Venticord/Venticord&type=Timeline&theme=dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=Venticord/Venticord&type=Timeline" />
+    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=Venticord/Venticord&type=Timeline" />
   </picture>
 </a>
 
@@ -47,14 +55,14 @@ Discord is trademark of Discord Inc. and solely mentioned for the sake of descri
 Mention of it does not imply any affiliation with or endorsement by Discord Inc.
 
 <details>
-<summary>Using Vencord violates Discord's terms of service</summary>
+<summary>Using Venticord and Vencord violates Discord's terms of service</summary>
 
 Client modifications are against Discord’s Terms of Service.
 
 However, Discord is pretty indifferent about them and there are no known cases of users getting banned for using client mods! So you should generally be fine as long as you don’t use any plugins that implement abusive behaviour. But no worries, all inbuilt plugins are safe to use!
 
-Regardless, if your account is very important to you and it getting disabled would be a disaster for you, you should probably not use any client mods (not exclusive to Vencord), just to be safe
+Regardless, if your account is very important to you and it getting disabled would be a disaster for you, you should probably not use any client mods (not exclusive to Vencord and Venticord), just to be safe
 
-Additionally, make sure not to post screenshots with Vencord in a server where you might get banned for it
+Additionally, make sure not to post screenshots with Ven(ti)cord in a server where you might get banned for it
 
 </details>
