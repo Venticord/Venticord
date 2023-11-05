@@ -26,7 +26,7 @@ export {
 
 export const WEBPACK_CHUNK = "webpackChunkdiscord_app";
 export const REACT_GLOBAL = "Vencord.Webpack.Common.React";
-export const VENCORD_USER_AGENT = `Vencord/${gitHash}${gitRemote ? ` (https://github.com/${gitRemote})` : ""}`;
+export const VENCORD_USER_AGENT = `Venticord/${gitHash}${gitRemote ? ` (https://github.com/${gitRemote})` : ""}`;
 export const SUPPORT_CHANNEL_ID = "1026515880080842772";
 
 export interface Dev {
@@ -402,7 +402,7 @@ export const DevsById = /* #__PURE__*/ (() =>
             .map(([_, v]) => [v.id, v] as const)
     ))
 )() as Record<string, Dev>;
-
+// iife so #__PURE__ works correctly
 export const VentiDevsById = /* #__PURE__*/ (() =>
     Object.freeze(Object.fromEntries(
         Object.entries(VentiDevs)
