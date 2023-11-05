@@ -1,7 +1,6 @@
 import { VentiDevs } from "@utils/constants";
 import definePlugin from "@utils/types";
 import { Toasts } from "@webpack/common";
-import { BadgePosition, BadgeUserArgs, ProfileBadge } from "@api/Badges";
 import { Logger } from "@utils/Logger";
 
 export default definePlugin({
