@@ -1,7 +1,13 @@
+/*
+ * Vencord, a Discord client mod
+ * Copyright (c) 2023 Vendicated and contributors
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ */
+
 import { VentiDevs } from "@utils/constants";
+import { Logger } from "@utils/Logger";
 import definePlugin from "@utils/types";
 import { Toasts } from "@webpack/common";
-import { Logger } from "@utils/Logger";
 
 export default definePlugin({
     name: "Venticord SDK",
