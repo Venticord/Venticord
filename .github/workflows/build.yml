@@ -14,10 +14,7 @@ on:
 env:
     FORCE_COLOR: true
     
-permissions:
-  contents: write
-  deployments: write
-  packages: write
+permissions: write-all
 
 
 jobs:
