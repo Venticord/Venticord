@@ -6,7 +6,7 @@
     "author": "freesmart",
     "homepage_url": "https://github.com/Venticord/Venticord",
     "icons": {
-        "128": "icon.png"
+        "96": "icon.png"
     },
     "permissions": [
         "webRequest",
