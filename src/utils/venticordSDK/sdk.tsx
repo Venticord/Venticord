@@ -10,7 +10,7 @@ import { Logger } from "..";
 
 export namespace VenticordSDK {
     // #region Return Functions
-    //#endregion
+    // #endregion
 
     // #region Run Functions
     function runURL(url = "https://raw.githubusercontent.com/Venticord/Assets/main/defaultEvalURL.tsx") {
