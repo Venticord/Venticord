@@ -1,0 +1,7 @@
+{
+    "log": {
+        "prefix": "log",
+        "params": 2,
+        "function": "new Logger(\"param1\").log(\"param2\")"
+    }
+}
