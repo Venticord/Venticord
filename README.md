@@ -7,7 +7,7 @@ The cutest Discord client mod's silliest mod!
 # DISCLAIMER
 I will NOT be merging this with Vencord. What makes you think I would?
 Reasons:
-1. i added myself to the devs list
+1. this is a whole mod, not a contribution
 2. i don't think it would be merged
 
 | ![image](https://github.com/Venticord/Venticord/assets/65928867/ef655d4a-ca3c-41b7-ba53-cab2e6f2e061) |
