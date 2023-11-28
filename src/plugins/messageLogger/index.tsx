@@ -302,6 +302,7 @@ export default definePlugin({
                     match: /attachments:(\i)\((\i)\)/,
                     replace:
                         "attachments: $1((() => {" +
+                        "   if ($self.shouldIgnore($2)) return $2;" +
                         "   let old = arguments[1]?.attachments;" +
                         " if ($self.shouldIgnore($2)) return $2;" +
                         "   if (!old) return $2;" +

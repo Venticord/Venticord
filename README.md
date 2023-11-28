@@ -18,6 +18,12 @@ Reasons:
 |:--:|
 | A screenshot of vencord showcasing the [vencord-theme](https://github.com/synqat/vencord-theme) |
 
+<<<<<<< HEAD
+=======
+| ![image](https://github.com/Vendicated/Vencord/assets/45497981/706722b1-32de-4d99-bee9-93993b504334) |
+|:--:|
+| A screenshot of vencord showcasing the [vencord-theme](https://github.com/synqat/vencord-theme) |
+>>>>>>> ec16fd874189411479890e00d93770001f9d09ab
 
 ## Features
 

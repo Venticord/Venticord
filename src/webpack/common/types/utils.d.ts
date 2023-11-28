@@ -160,6 +160,30 @@ export interface i18n {
     loadPromise: Promise<void>;
 
     Messages: Record<i18nMessages, any>;
+<<<<<<< HEAD
+=======
+}
+
+export interface Clipboard {
+    copy(text: string): void;
+    SUPPORTS_COPY: boolean;
+}
+
+export interface NavigationRouter {
+    back(): void;
+    forward(): void;
+    hasNavigated(): boolean;
+    getHistory(): {
+        action: string;
+        length: 50;
+        [key: string]: any;
+    };
+    transitionTo(path: string, ...args: unknown[]): void;
+    transitionToGuild(guildId: string, ...args: unknown[]): void;
+    replaceWith(...args: unknown[]): void;
+    getLastRouteChangeSource(): any;
+    getLastRouteChangeSourceLocationStack(): any;
+>>>>>>> ec16fd874189411479890e00d93770001f9d09ab
 }
 
 export interface Clipboard {

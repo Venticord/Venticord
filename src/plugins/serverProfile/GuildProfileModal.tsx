@@ -10,8 +10,13 @@ import { classNameFactory } from "@api/Styles";
 import { openImageModal, openUserProfile } from "@utils/discord";
 import { classes } from "@utils/misc";
 import { ModalRoot, ModalSize, openModal } from "@utils/modal";
+<<<<<<< HEAD
 import { LazyComponent, useAwaiter } from "@utils/react";
 import { findByPropsLazy, findByExportedComponentLazy } from "@webpack";
+=======
+import { useAwaiter } from "@utils/react";
+import { findByPropsLazy, findExportedComponentLazy } from "@webpack";
+>>>>>>> ec16fd874189411479890e00d93770001f9d09ab
 import { FluxDispatcher, Forms, GuildChannelStore, GuildMemberStore, moment, Parser, PresenceStore, RelationshipStore, ScrollerThin, SnowflakeUtils, TabBar, Timestamp, useEffect, UserStore, UserUtils, useState, useStateFromStores } from "@webpack/common";
 import { Guild, User } from "discord-types/general";
 

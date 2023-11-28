@@ -33,8 +33,6 @@ export default definePlugin({
     },
 
     stop() {
-        clearInterval(window.onekoInterval);
-        delete window.onekoInterval;
         document.getElementById("oneko")?.remove();
     }
 });

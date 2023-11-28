@@ -23,7 +23,10 @@ import { appendFile, mkdir, readdir, readFile, rm, writeFile } from "fs/promises
 import { join } from "path";
 import Zip from "zip-local";
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ec16fd874189411479890e00d93770001f9d09ab
 import { BUILD_TIMESTAMP, commonOpts, globPlugins, isDev, VERSION } from "./common.mjs";
 
 /**

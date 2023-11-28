@@ -20,4 +20,8 @@ export default definePlugin({
             }
         }
     ]
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> ec16fd874189411479890e00d93770001f9d09ab
