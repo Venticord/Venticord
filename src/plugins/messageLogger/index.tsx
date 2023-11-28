@@ -303,6 +303,7 @@ export default definePlugin({
                     replace:
                         "attachments: $1((() => {" +
                         "   let old = arguments[1]?.attachments;" +
+                        " if ($self.shouldIgnore($2)) return $2;" +
                         "   if (!old) return $2;" +
                         "   let new_ = $2.attachments?.map(a => a.id) ?? [];" +
                         "   let diff = old.filter(a => !new_.includes(a.id));" +

@@ -27,6 +27,8 @@ export { PlainSettings, Settings };
 import "./utils/quickCss";
 import "./webpack/patchWebpack";
 
+import { StartAt } from "@utils/types";
+
 import { get as dsGet } from "./api/DataStore";
 import { showNotification } from "./api/Notifications";
 import { PlainSettings, Settings } from "./api/Settings";
@@ -79,7 +81,7 @@ async function syncSettings() {
 
 async function init() {
     await onceReady;
-    startAllPlugins();
+    startAllPlugins(StartAt.WebpackReady);
 
     syncSettings();
 
@@ -92,7 +94,7 @@ async function init() {
                 await update();
                 if (Settings.autoUpdateNotification)
                     setTimeout(() => showNotification({
-                        title: "Venticord has been updated!",
+                        title: "Vencord has been updated!",
                         body: "Click here to restart",
                         permanent: true,
                         noPersist: true,
@@ -103,7 +105,7 @@ async function init() {
 
             if (Settings.notifyAboutUpdates)
                 setTimeout(() => showNotification({
-                    title: "A Venticord update is available!",
+                    title: "A Vencord update is available!",
                     body: "Click here to view the update",
                     permanent: true,
                     noPersist: true,
@@ -123,20 +125,23 @@ async function init() {
                 "Webpack has finished initialising, but some patches haven't been applied yet.",
                 "This might be expected since some Modules are lazy loaded, but please verify",
                 "that all plugins are working as intended.",
-                "You are seeing this warning because this is a Development build of Venticord.",
+                "You are seeing this warning because this is a Development build of Vencord.",
                 "\nThe following patches have not been applied:",
                 "\n\n" + pendingPatches.map(p => `${p.plugin}: ${p.find}`).join("\n")
             );
     }
 }
 
+startAllPlugins(StartAt.Init);
 init();
 
-if (IS_DISCORD_DESKTOP && Settings.winNativeTitleBar && navigator.platform.toLowerCase().startsWith("win")) {
-    document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
+    startAllPlugins(StartAt.DOMContentLoaded);
+
+    if (IS_DISCORD_DESKTOP && Settings.winNativeTitleBar && navigator.platform.toLowerCase().startsWith("win")) {
         document.head.append(Object.assign(document.createElement("style"), {
             id: "vencord-native-titlebar-style",
             textContent: "[class*=titleBar]{display: none!important}"
         }));
-    }, { once: true });
-}
+    }
+}, { once: true });

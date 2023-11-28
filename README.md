@@ -10,7 +10,13 @@ Reasons:
 1. i added myself to the devs list
 2. i don't think it would be merged
 
-![image](https://github.com/Venticord/Venticord/assets/65928867/ef655d4a-ca3c-41b7-ba53-cab2e6f2e061)
+| ![image](https://github.com/Venticord/Venticord/assets/65928867/ef655d4a-ca3c-41b7-ba53-cab2e6f2e061) |
+|:--:|
+| A screenshot of venticord showcasing the support button for vencord |
+
+| ![image](https://github.com/Vendicated/Vencord/assets/45497981/706722b1-32de-4d99-bee9-93993b504334) |
+|:--:|
+| A screenshot of vencord showcasing the [vencord-theme](https://github.com/synqat/vencord-theme) |
 
 
 ## Features
