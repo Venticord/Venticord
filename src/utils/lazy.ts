@@ -120,8 +120,4 @@ export function proxyLazy<T>(factory: () => T, attempts = 5, isChild = false): T
             return Reflect.get(target[kGET](), p, receiver);
         }
     }) as any;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> ec16fd874189411479890e00d93770001f9d09ab

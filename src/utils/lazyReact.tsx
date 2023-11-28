@@ -26,8 +26,4 @@ export function LazyComponent<T extends object = any>(factory: () => React.Compo
     LazyComponent.$$get = get;
 
     return LazyComponent as ComponentType<T>;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> ec16fd874189411479890e00d93770001f9d09ab

@@ -25,7 +25,3 @@ export let Menu = {} as t.Menu;
 waitFor(["MenuItem", "MenuSliderControl"], m => Menu = m);
 
 export const ContextMenuApi: t.ContextMenuApi = findByPropsLazy("closeContextMenu", "openContextMenu");
-<<<<<<< HEAD
-=======
-
->>>>>>> ec16fd874189411479890e00d93770001f9d09ab

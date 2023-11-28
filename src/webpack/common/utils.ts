@@ -128,8 +128,4 @@ export let SettingsRouter: any;
 waitFor(["open", "saveAccountChanges"], m => SettingsRouter = m);
 
 const { Permissions } = findLazy(m => typeof m.Permissions?.ADMINISTRATOR === "bigint") as { Permissions: t.PermissionsBits; };
-<<<<<<< HEAD
 export { Permissions as PermissionsBits };
-=======
-export { Permissions as PermissionsBits };
->>>>>>> ec16fd874189411479890e00d93770001f9d09ab

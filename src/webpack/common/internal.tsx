@@ -41,8 +41,4 @@ export function waitForStore(name: string, cb: (v: any) => void) {
     if (IS_DEV) lazyWebpackSearchHistory.push(["waitForStore", [name]]);
 
     waitFor(filters.byStoreName(name), cb, { isIndirect: true });
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> ec16fd874189411479890e00d93770001f9d09ab
