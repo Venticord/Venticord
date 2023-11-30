@@ -178,10 +178,6 @@ export default definePlugin({
 
                         if (!await getTag(name))
                             return sendBotMessage(ctx.channel.id, {
-<<<<<<< HEAD
-
-=======
->>>>>>> ec16fd874189411479890e00d93770001f9d09ab
                                 content: `${EMOTE} A Tag with the name **${name}** does not exist!`
                             });
 
@@ -189,20 +185,12 @@ export default definePlugin({
                         await removeTag(name);
 
                         sendBotMessage(ctx.channel.id, {
-<<<<<<< HEAD
-
-=======
->>>>>>> ec16fd874189411479890e00d93770001f9d09ab
                             content: `${EMOTE} Successfully deleted the tag **${name}**!`
                         });
                         break; // end 'delete'
                     }
                     case "list": {
                         sendBotMessage(ctx.channel.id, {
-<<<<<<< HEAD
-
-=======
->>>>>>> ec16fd874189411479890e00d93770001f9d09ab
                             embeds: [
                                 {
                                     // @ts-ignore
@@ -225,18 +213,10 @@ export default definePlugin({
 
                         if (!tag)
                             return sendBotMessage(ctx.channel.id, {
-<<<<<<< HEAD
-
-=======
->>>>>>> ec16fd874189411479890e00d93770001f9d09ab
                                 content: `${EMOTE} A Tag with the name **${name}** does not exist!`
                             });
 
                         sendBotMessage(ctx.channel.id, {
-<<<<<<< HEAD
-
-=======
->>>>>>> ec16fd874189411479890e00d93770001f9d09ab
                             content: tag.message.replaceAll("\\n", "\n")
                         });
                         break; // end 'preview'
@@ -244,10 +224,6 @@ export default definePlugin({
 
                     default: {
                         sendBotMessage(ctx.channel.id, {
-<<<<<<< HEAD
-
-=======
->>>>>>> ec16fd874189411479890e00d93770001f9d09ab
                             content: "Invalid sub-command"
                         });
                         break;

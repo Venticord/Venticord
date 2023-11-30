@@ -211,8 +211,4 @@ function hexToLightness(hexCode: string) {
     const lightness = 100 * ((cMax + cMin) / 2);
 
     return lightness;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> ec16fd874189411479890e00d93770001f9d09ab

@@ -25,11 +25,7 @@ import definePlugin, { OptionType } from "@utils/types";
 import { findByPropsLazy, findComponentByCodeLazy } from "@webpack";
 import { ApplicationAssetUtils, FluxDispatcher, Forms, GuildStore, React, SelectedChannelStore, SelectedGuildStore, UserStore } from "@webpack/common";
 
-<<<<<<< HEAD
-const ActivityComponent = findComponetByCodeLazy("onOpenGameProfile");
-=======
 const ActivityComponent = findComponentByCodeLazy("onOpenGameProfile");
->>>>>>> ec16fd874189411479890e00d93770001f9d09ab
 const ActivityClassName = findByPropsLazy("activity", "buttonColor");
 const Colors = findByPropsLazy("profileColors");
 

@@ -15,18 +15,10 @@
     justify-content: flex-start;
 }
 
-<<<<<<< HEAD
 .client-theme-container>[class^="colorSwatch"]>[class^="swatch"] {
-=======
-.client-theme-container > [class^="colorSwatch"] > [class^="swatch"] {
->>>>>>> ec16fd874189411479890e00d93770001f9d09ab
     border: thin solid var(--background-modifier-accent) !important;
 }
 
 .client-theme-warning {
     color: var(--text-danger);
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> ec16fd874189411479890e00d93770001f9d09ab
