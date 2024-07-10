@@ -6,6 +6,6 @@ I am, however, making plugins for Vencord itself on my main account... so YES do
 
 [Check it out here](https://github.com/josiauh/Vencord)
 
-If you HAVE used Venticord in the last few years (that it was supported) and updated it WON'T work anymore (bricked)
+If you HAVE used Venticord in the last few years (that it was supported) UNINSTALL and go back to vencord.
 
 -- Josiah --
